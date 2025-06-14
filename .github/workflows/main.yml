@@ -1,0 +1,41 @@
+name: Release(npm)
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    name: Bun on ubuntu-latest
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout 🗃️
+        uses: actions/checkout@v4
+
+      - name: Setup Bun latest ⚡
+        uses: oven-sh/setup-bun@v2
+        with:
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Setup Node 🌏
+        uses: actions/setup-node@v4
+        with:
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Install dependencies 🌆
+        run: bun install --frozen-lockfile
+
+      - name: Build 🛠️
+        run: bun run build
+
+      - name: Publish ✨
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

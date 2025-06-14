@@ -1,0 +1,24 @@
+.network {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.rippleContainer {
+  background: transparent;
+  color: white;
+  display: block;
+  width: fit-content;
+  padding: 10px 20px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-radius: 13px;
+  user-select: none;
+  gap: 1.5rem;
+}
+
+.wifiIcon {
+  font-size: 1.5rem;
+  color: #ecab79;
+}
