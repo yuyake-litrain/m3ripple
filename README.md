@@ -13,8 +13,6 @@
 
 ## Getting Started
 ### Install
-``````
 ```bash
-bun install m3ripple
+bun install @m_three_ui/m3ripple
 ```
-<details></details>
