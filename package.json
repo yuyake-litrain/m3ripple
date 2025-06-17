@@ -12,7 +12,7 @@
     "@biomejs/biome": "1.9.4",
     "@chromatic-com/storybook": "^3",
     "@storybook/addon-essentials": "^8.6.14",
-    "@storybook/addon-onboarding": "^8.6.14",
+    "@storybook/addon-onboarding": "^9.0.10",
     "@storybook/blocks": "^8.6.14",
     "@storybook/experimental-addon-test": "^8.6.14",
     "@storybook/react": "^8.6.14",
