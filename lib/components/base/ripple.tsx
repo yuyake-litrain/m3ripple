@@ -55,6 +55,9 @@ const Ripple = memo(
           await anim.current.finished;
         }
 
+        if (!ref.current) {
+          return;
+        }
         // fade-out animation
         await ref.current.animate(
           {
