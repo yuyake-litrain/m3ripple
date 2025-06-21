@@ -1,23 +1,15 @@
 {
   "name": "@m_three_ui/m3ripple",
-  "version": "1.0.5",
-  "author": "m-h-san",
+  "version": "1.0.6",
+  "author": "yuyake-litrain",
   "repository": {
     "type": "git",
-    "url": "https://github.com/m-h-san/m3ripple.git"
+    "url": "https://github.com/yuyake-litrain/m3ripple.git"
   },
   "main": "./dist/m3ripple.umd.cjs",
   "module": "./dist/m3ripple.js",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@chromatic-com/storybook": "^3",
-    "@storybook/addon-essentials": "^8.6.14",
-    "@storybook/addon-onboarding": "^8.6.14",
-    "@storybook/blocks": "^8.6.14",
-    "@storybook/experimental-addon-test": "^8.6.14",
-    "@storybook/react": "^8.6.14",
-    "@storybook/react-vite": "^8.6.14",
-    "@storybook/test": "^8.6.14",
     "@types/node": "^22.15.18",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
@@ -28,7 +20,6 @@
     "concurrently": "^9.1.2",
     "globals": "^16.0.0",
     "playwright": "^1.52.0",
-    "storybook": "^8.6.14",
     "typed-css-modules": "^0.9.1",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
@@ -66,8 +57,6 @@
     "format": "biome format --write",
     "check": "biome check --write",
     "preview": "vite preview",
-    "storybook": "concurrently 'storybook dev -p 6006' 'tcm lib -w'",
-    "build-storybook": "storybook build",
     "preinstall": "npx only-allow bun"
   },
   "type": "module",
