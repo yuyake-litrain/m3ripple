@@ -1,8 +1,7 @@
 <h1 align="center">✨ m3ripple</h1>
 <p align="center">Bring Material 3(You) Ripple Effect to your <b>React</b> projects!</p>
 
-
-
+<div align="center"><a href="https://m3ripple.js.org/">Live Demo</a></div><br />
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/5b8cd5e6-5c91-4ca1-bc4d-50d5781a8be9" />
