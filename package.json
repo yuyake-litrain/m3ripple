@@ -10,7 +10,7 @@
   "module": "./dist/m3ripple.js",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@types/node": "^22.15.18",
+    "@types/node": "^24.0.7",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react-swc": "^3.9.0",
