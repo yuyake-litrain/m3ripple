@@ -90,6 +90,6 @@ export default YourComponent;
 |`opacity_level1`|yes|Transparency just before the sparkle disappears. *The transparency when initially displayed is calculated by the current progress of the Ripple Effect|`"0.2"`|`string`|
 |`opacity_level2`|yes|Transparency just before Sparkles disappear.Set after opacity_level1.|`"0.1"`|`string`|
 |`sparklesMaxCount`|yes|Total amount of dots representing sparkle.|`2048`|`number`|
-|`divProps`|yes|Since the RippleContainer is rendered as a Div element, you can pass Div element Props.|`{}`|`Omit, \| 'className' \| 'onMouseDown' \| 'onMouseUp' \| 'onMouseLeave' \| 'onTouchStart' \| 'onTouchMove' \| 'onTouchEnd' \| 'onTouchCancel'>`|
+|`divProps`|yes|Since the RippleContainer is rendered as a Div element, you can pass Div element Props.|`{}`|`Omit<ComponentPropsWithoutRef<'div'>, \| 'className' \| 'onMouseDown' \| 'onMouseUp' \| 'onMouseLeave' \| 'onTouchStart' \| 'onTouchMove' \| 'onTouchEnd' \| 'onTouchCancel'>`|
 |`onMouseDown`, `onMouseUp`, `onMouseLeave`, `onTouchStart`, `onTouchMove`, `onTouchEnd`, `onTouchCancel`|yes|Props to handle events without interfering with the Ripple Effect implementation. one function is accepted. *Rather than using this, we recommend wrapping the RippleContainer itself in another HTML element and defining a handler for that element.|`()=>{}`|`(event) => void`|
 </div>
