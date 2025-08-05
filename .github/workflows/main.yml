@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies 🌆
         run: |
           rm -rf node_modules
-          bun install --frozen-lockfile
+          bun install
 
       - name: Build 🛠️
         run: bun run build
