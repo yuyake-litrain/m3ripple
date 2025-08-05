@@ -48,6 +48,8 @@ Import `<RippleContainer>` component(based on `<div />`) and set props.
 #### Example
 ```tsx
 import { RippleContainer } from '@m_three_ui/m3ripple'; //import it
+import '@m_three_ui/m3ripple/css' // import css
+
 import styles from './some_css_file.module.css';
 
 const YourComponent = () => {

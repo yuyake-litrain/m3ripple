@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { type RefObject, memo, useEffect, useRef } from 'react';
-import { type Sparkles, drawSparkles } from '../../ripple/sparkles';
+import { memo, type RefObject, useEffect, useRef } from 'react';
+import { drawSparkles, type Sparkles } from '../../ripple/sparkles';
 import styles from './sparkles_canvas.module.css';
 
 const SparklesCanvas = memo(

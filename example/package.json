@@ -6,6 +6,12 @@
   "scripts": {
     "dev": "concurrently 'vite' 'tcm src -w'"
   },
+  "dependencies": {
+    "@m_three_ui/m3ripple": "link:@m_three_ui/m3ripple",
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
   "devDependencies": {
     "@iconify/react": "^6.0.0",
     "@types/bun": "latest",

@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import { RippleContainer } from '../../../../dist/m3ripple';
+import { RippleContainer } from '@m_three_ui/m3ripple';
 import styles from './network.module.css';
 
 const Network = ({ name }: { name: string }) => {

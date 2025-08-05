@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import Network from './components/wifi_selector/network';
 import styles from './index.module.css';
 import 'unfonts.css';
+import '@m_three_ui/m3ripple/css'
 
 const container = document.getElementById('root');
 
