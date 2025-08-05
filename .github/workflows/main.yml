@@ -31,7 +31,7 @@ jobs:
 
       - name: Install dependencies 🌆
         run: |
-          rm -rf node_modules
+          rm -rf node_modules bun.lock
           bun install
 
       - name: Build 🛠️
