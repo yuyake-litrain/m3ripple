@@ -43,7 +43,7 @@ bun install @m_three_ui/m3ripple
 </details>
 
 ### Use
-Import `<RippleContainer>` component(based on `<div />`) and set props.
+Import `<RippleContainer>` component(by default, it's rendered as `<div />`) and set props.
 
 #### Example
 ```tsx
@@ -55,6 +55,7 @@ import styles from './some_css_file.module.css';
 const YourComponent = () => {
   return (
     <RippleContainer
+      as = 'div'
       isMaterial3 = {true}
       beforeRippleFn = {(event) =>{}}
       className = {styles.rippleContainer}
@@ -63,14 +64,6 @@ const YourComponent = () => {
       opacity_level1 = "0.4"
       opacity_level2 = "0.1"
       sparklesMaxCount = 2048
-      divProps = {{}}
-      onMouseDown = {() => {}}
-      onTouchStart = {() => {}}
-      onTouchMove = {() => {}}
-      onMouseUp = {() => {}}
-      onTouchEnd = {() => {}}
-      onMouseLeave = {() => {}}
-      onTouchCancel = {() => {}}
     >
       <div className={styles.children} />
     </RippleContainer>
@@ -83,15 +76,16 @@ export default YourComponent;
 
 |Property|optional|explanation|default|type|
 |----|----|----|----|----|
-|`isMaterial3`|yes|Whether to use ripple of Material 3|`true`|`boolean`|
-|`beforeRippleFn`|yes|A function to be executed when a click occurs and just before the ripple is displayed (used for example to display a button shadow)|`()=>{}`|`(event: React.MouseEvent \| React.TouchEvent) => void`|
-|`className`|yes|Since RippleContainer is rendered as a div element, this is the ClassName of that div element.|`""`|`string`|
-|`children`|yes|Child Elements of RippleContainer|`undefined`|`ReactNode`|
+|`as`|yes|What element is RippleContainer rendered as.|`"div"`|`ElementType`|
+|`isMaterial3`|yes|Whether to use ripple of Material 3.|`true`|`boolean`|
+|`beforeRippleFn`|yes|A function to be executed when a click occurs and just before the ripple is displayed (used for example to display a button shadow).|`()=>{}`|`(event: React.MouseEvent \| React.TouchEvent) => void`|
+|`className`|yes|Since RippleContainer is rendered as the element which is selected by `as` property, this is the ClassName of that element.|`""`|`string`|
+|`children`|yes|Child Elements of RippleContainer.|`undefined`|`ReactNode`|
 |`rippleColor`|yes|Ripple Effect Colors. If transparency is not specified, the overlap will not be visible when multiple clicks are made.|`"#ffffff35"`|`string`|
 |`sparklesColorRGB`|yes|Specify sparkle color as space-separated RGB. Transparency cannot be specified.|`"255 255 255"`|`string`|
-|`opacity_level1`|yes|Transparency just before the sparkle disappears. *The transparency when initially displayed is calculated by the current progress of the Ripple Effect|`"0.2"`|`string`|
-|`opacity_level2`|yes|Transparency just before Sparkles disappear.Set after opacity_level1.|`"0.1"`|`string`|
+|`opacity_level1`|yes|Transparency just before the sparkle disappears. \*The transparency when initially displayed is calculated by the current progress of the Ripple Effect.|`"0.2"`|`string`|
+|`opacity_level2`|yes|Transparency just before Sparkles disappear.Set after `opacity_level1`.|`"0.1"`|`string`|
 |`sparklesMaxCount`|yes|Total amount of dots representing sparkle.|`2048`|`number`|
-|`divProps`|yes|Since the RippleContainer is rendered as a Div element, you can pass Div element Props.|`{}`|`Omit<ComponentPropsWithoutRef<'div'>, \| 'className' \| 'onMouseDown' \| 'onMouseUp' \| 'onMouseLeave' \| 'onTouchStart' \| 'onTouchMove' \| 'onTouchEnd' \| 'onTouchCancel'>`|
-|`onMouseDown`, `onMouseUp`, `onMouseLeave`, `onTouchStart`, `onTouchMove`, `onTouchEnd`, `onTouchCancel`|yes|Props to handle events without interfering with the Ripple Effect implementation. one function is accepted. *Rather than using this, we recommend wrapping the RippleContainer itself in another HTML element and defining a handler for that element.|`()=>{}`|`(event) => void`|
+|Other Properties|yes|You can set other properties to add to the rendered element. e.g., `href` attribute of the RippleContainer whose rendered as `<a></a>` element.|-|-|
+
 </div>
