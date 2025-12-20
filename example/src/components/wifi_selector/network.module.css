@@ -6,8 +6,6 @@
 .rippleContainer {
   background: transparent;
   color: white;
-  display: block;
-  width: fit-content;
   padding: 10px 20px;
   width: 100%;
   height: 70px;
