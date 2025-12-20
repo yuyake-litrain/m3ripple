@@ -2,10 +2,10 @@
 <p align="center">Bring Material 3(You) Ripple Effect to your <b>React</b> projects!</p>
 <div align="center">
 
-[![NPM Version](https://img.shields.io/npm/v/%40m_three_ui%2Fm3ripple?style=for-the-badge&logo=npm&logoColor=white&labelColor=%235c4b39&color=%23363024)](https://www.npmjs.com/package/@m_three_ui/m3ripple)
-[![npm package minimized gzipped size (scoped)](https://img.shields.io/bundlejs/size/%40m_three_ui/m3ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](#)
+[![NPM Version](https://img.shields.io/npm/v/m3ripple?style=for-the-badge&logo=npm&logoColor=white&labelColor=%235c4b39&color=%23363024)](https://www.npmjs.com/package/m3ripple)
+[![npm package minimized gzipped size (scoped)](https://img.shields.io/bundlejs/size/m3ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](#)
 [![GitHub License](https://img.shields.io/github/license/yuyake-litrain/m3ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](https://github.com/yuyake-litrain/m3ripple/blob/main/LICENSE)
-[![NPM Downloads](https://img.shields.io/npm/dy/%40m_three_ui%2Fm3ripple?style=for-the-badge&logo=npm&logoColor=white&labelColor=%235c4b39&color=%23363024)](https://npmtrends.com/@m_three_ui/m3ripple)
+[![NPM Downloads](https://img.shields.io/npm/dy/m3ripple?style=for-the-badge&logo=npm&logoColor=white&labelColor=%235c4b39&color=%23363024)](https://npmtrends.com/m3ripple)
 [![GitHub Repo stars](https://img.shields.io/github/stars/yuyake-litrain/m3ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](#)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yuyake-litrain/m3ripple/main.yml?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](https://github.com/yuyake-litrain/m3ripple/actions/workflows/main.yml)
 </div>
@@ -26,20 +26,20 @@
 ### Install
 #### Bun
 ```bash
-bun install @m_three_ui/m3ripple
+bun install m3ripple
 ```
 #### Others
 <details>
   <summary>npm</summary>
-  <pre>npm i @m_three_ui/m3ripple</pre>
+  <pre>npm i m3ripple</pre>
 </details>
 <details>
   <summary>pnpm</summary>
-  <pre>pnpm add @m_three_ui/m3ripple</pre>
+  <pre>pnpm add m3ripple</pre>
 </details>
 <details>
   <summary>Yarn</summary>
-  <pre>yarn add @m_three_ui/m3ripple</pre>
+  <pre>yarn add m3ripple</pre>
 </details>
 
 ### Use
@@ -47,8 +47,8 @@ Import `<RippleContainer>` component(by default, it's rendered as `<div />`) and
 
 #### Example
 ```tsx
-import { RippleContainer } from '@m_three_ui/m3ripple'; //import it
-import '@m_three_ui/m3ripple/css' // import css
+import { RippleContainer } from 'm3ripple'; //import it
+import 'm3ripple/css' // import css
 
 import styles from './some_css_file.module.css';
 
