@@ -1,15 +1,15 @@
-# m3ripple example project
-This is the example project for m3ripple library.\
+# sparkle-ripple example project
+This is the example project for sparkle-ripple library.\
 Before runnning this project, you have to build the library first.
 
 # Runnning
-## 1.Build The m3ripple project
-I. make sure the current directory is m3ripple root.
+## 1.Build The sparkle-ripple project
+I. make sure the current directory is sparkle-ripple root.
 ```bash
 $ pwd
-=> /path/to/m3ripple
+=> /path/to/sparkle-ripple
 ```
-II. build m3ripple library
+II. build sparkle-ripple library
 ```bash
 bun run build
 ```
@@ -24,8 +24,8 @@ II. Run it:
 bun run dev
 ```
 
-## 3. Reflect changes of m3ripple
-You have to build m3ripple again.\
+## 3. Reflect changes of sparkle-ripple
+You have to build sparkle-ripple again.\
 Chack the first-step and rebuild it.
 
 ---

@@ -1,17 +1,14 @@
-# PUBLISH IS WORK IN PROGRESS!!
-You can't use this package now!\
-Please wait until I publish.
-
-<h1 align="center">✨ m3ripple</h1>
+<h1 align="center">✨ sparkle-ripple</h1>
 <p align="center">Bring Material 3(You) Ripple Effect to your <b>React</b> projects!</p>
+<p align="center">Previously, it was named <b>m3-ripple</b>.</p>
 <div align="center">
 
-[![NPM Version](https://img.shields.io/npm/v/m3ripple?style=for-the-badge&logo=npm&logoColor=white&labelColor=%235c4b39&color=%23363024)](https://www.npmjs.com/package/m3ripple)
-[![npm package minimized gzipped size (scoped)](https://img.shields.io/bundlejs/size/m3ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](#)
-[![GitHub License](https://img.shields.io/github/license/yuyake-litrain/m3ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](https://github.com/yuyake-litrain/m3ripple/blob/main/LICENSE)
-[![NPM Downloads](https://img.shields.io/npm/dy/m3ripple?style=for-the-badge&logo=npm&logoColor=white&labelColor=%235c4b39&color=%23363024)](https://npmtrends.com/m3ripple)
-[![GitHub Repo stars](https://img.shields.io/github/stars/yuyake-litrain/m3ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](#)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yuyake-litrain/m3ripple/main.yml?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](https://github.com/yuyake-litrain/m3ripple/actions/workflows/main.yml)
+[![NPM Version](https://img.shields.io/npm/v/sparkle-ripple?style=for-the-badge&logo=npm&logoColor=white&labelColor=%235c4b39&color=%23363024)](https://www.npmjs.com/package/sparkle-ripple)
+[![npm package minimized gzipped size (scoped)](https://img.shields.io/bundlejs/size/sparkle-ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](#)
+[![GitHub License](https://img.shields.io/github/license/yuyake-litrain/sparkle-ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](https://github.com/yuyake-litrain/sparkle-ripple/blob/main/LICENSE)
+[![NPM Downloads](https://img.shields.io/npm/dy/sparkle-ripple?style=for-the-badge&logo=npm&logoColor=white&labelColor=%235c4b39&color=%23363024)](https://npmtrends.com/sparkle-ripple)
+[![GitHub Repo stars](https://img.shields.io/github/stars/yuyake-litrain/sparkle-ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](#)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yuyake-litrain/sparkle-ripple/main.yml?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](https://github.com/yuyake-litrain/sparkle-ripple/actions/workflows/main.yml)
 </div>
 <div align="center"><a href="https://m3ripple.js.org/"><b>Live Demo</b></a></div><br />
 
@@ -30,20 +27,20 @@ Please wait until I publish.
 ### Install
 #### Bun
 ```bash
-bun install m3ripple
+bun install sparkle-ripple
 ```
 #### Others
 <details>
   <summary>npm</summary>
-  <pre>npm i m3ripple</pre>
+  <pre>npm i sparkle-ripple</pre>
 </details>
 <details>
   <summary>pnpm</summary>
-  <pre>pnpm add m3ripple</pre>
+  <pre>pnpm add sparkle-ripple</pre>
 </details>
 <details>
   <summary>Yarn</summary>
-  <pre>yarn add m3ripple</pre>
+  <pre>yarn add sparkle-ripple</pre>
 </details>
 
 ### Use
@@ -51,8 +48,8 @@ Import `<RippleContainer>` component(by default, it's rendered as `<div />`) and
 
 #### Example
 ```tsx
-import { RippleContainer } from 'm3ripple'; //import it
-import 'm3ripple/css' // import css
+import { RippleContainer } from 'sparkle-ripple'; //import it
+import 'sparkle-ripple/css' // import css
 
 import styles from './some_css_file.module.css';
 

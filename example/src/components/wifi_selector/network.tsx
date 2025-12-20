@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
-import 'm3ripple/css';
-import { RippleContainer } from 'm3ripple';
+import 'sparkle-ripple/css';
+import { RippleContainer } from 'sparkle-ripple';
 import styles from './network.module.css';
 
 const Network = ({ name }: { name: string }) => {

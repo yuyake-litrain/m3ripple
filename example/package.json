@@ -7,7 +7,7 @@
     "dev": "concurrently 'vite' 'tcm src -w'"
   },
   "dependencies": {
-    "m3ripple": "file:../",
+    "sparkle-ripple": "file:../",
     "@types/react": "^19.2.7",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"

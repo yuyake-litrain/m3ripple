@@ -11,8 +11,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/index.ts'),
-      name: 'm3ripple',
-      fileName: 'm3ripple',
+      name: 'sparkle-ripple',
+      fileName: 'sparkle-ripple',
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],

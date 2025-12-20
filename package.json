@@ -1,14 +1,14 @@
 {
-  "name": "m3ripple",
+  "name": "sparkle-ripple",
   "version": "3.0.0",
   "author": "yuyake-litrain",
   "homepage": "https://m3ripple.js.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yuyake-litrain/m3ripple.git"
+    "url": "https://github.com/yuyake-litrain/sparkle-ripple.git"
   },
-  "main": "./dist/m3ripple.umd.cjs",
-  "module": "./dist/m3ripple.js",
+  "main": "./dist/sparkle-ripple.umd.cjs",
+  "module": "./dist/sparkle-ripple.js",
   "devDependencies": {
     "@biomejs/biome": "^2.3.10",
     "@types/node": "^22.19.3",
@@ -34,11 +34,11 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/m3ripple.js",
-      "require": "./dist/m3ripple.umd.cjs"
+      "types": "./dist/sparkle-ripple.d.ts",
+      "import": "./dist/sparkle-ripple.js",
+      "require": "./dist/sparkle-ripple.umd.cjs"
     },
-    "./css": "./dist/m3ripple.css"
+    "./css": "./dist/sparkle-ripple.css"
   },
   "description": "Bring Material 3(You) Ripple Effect to your projects!",
   "files": [
