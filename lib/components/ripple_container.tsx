@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import {
   type ComponentPropsWithoutRef,
+  type ElementType,
   type MouseEvent,
   type ReactNode,
   type TouchEvent,
@@ -25,55 +26,38 @@ export type RippleObj = {
   tobeDeleted: boolean;
 };
 
-type DivProps = Omit<
-  ComponentPropsWithoutRef<'div'>,
-  | 'className'
-  | 'onMouseDown'
-  | 'onMouseUp'
-  | 'onMouseLeave'
-  | 'onTouchStart'
-  | 'onTouchMove'
-  | 'onTouchEnd'
-  | 'onTouchCancel'
->;
-
-const RippleContainer = ({
-  isMaterial3 = true,
-  beforeRippleFn = () => {},
-  className = '',
-  children,
-  rippleColor = '#ffffff35',
-  sparklesColorRGB = '255 255 255',
-  opacity_level1 = '0.2',
-  opacity_level2 = '0.1',
-  sparklesMaxCount = 2048,
-  divProps = {},
-  onMouseDown = () => {},
-  onTouchStart = () => {},
-  onTouchMove = () => {},
-  onMouseUp = () => {},
-  onMouseLeave = () => {},
-  onTouchEnd = () => {},
-  onTouchCancel = () => {},
-}: {
+type Props<T extends ElementType = 'div'> = Omit<ComponentPropsWithoutRef<T>, 'as'> & {
+  as?: T;
   isMaterial3?: boolean;
   beforeRippleFn?: (event: React.MouseEvent | React.TouchEvent) => void;
-  className?: string;
   children?: ReactNode;
   rippleColor?: string;
   sparklesColorRGB?: string;
   opacity_level1?: string;
   opacity_level2?: string;
   sparklesMaxCount?: number;
-  divProps?: DivProps;
-  onMouseDown?: (event: MouseEvent) => void;
-  onTouchStart?: (event: TouchEvent) => void;
-  onTouchMove?: (event: TouchEvent) => void;
-  onMouseUp?: (event: MouseEvent) => void;
-  onMouseLeave?: (event: MouseEvent) => void;
-  onTouchEnd?: (event: TouchEvent) => void;
-  onTouchCancel?: (event: TouchEvent) => void;
-}) => {
+};
+
+const RippleContainer = <T extends ElementType = 'div'>({
+  as,
+  isMaterial3 = true,
+  beforeRippleFn,
+  rippleColor = '#ffffff35',
+  sparklesColorRGB = '255 255 255',
+  opacity_level1 = '0.2',
+  opacity_level2 = '0.1',
+  sparklesMaxCount = 2048,
+  className,
+  children,
+  onMouseDown,
+  onTouchStart,
+  onTouchMove,
+  onMouseUp,
+  onMouseLeave,
+  onTouchEnd,
+  onTouchCancel,
+  ...rest
+}: Props<T>) => {
   const [ripples, setRipples] = useState<RippleObj[]>([]);
   const isScroll = useRef<boolean>(false);
   const disableClieckedRipple = useRef<boolean>(false);
@@ -209,37 +193,39 @@ const RippleContainer = ({
     isScroll.current = true;
   };
 
+  const Component: ElementType = as ?? 'div'
+
   return (
-    <div
-      {...divProps}
-      className={clsx(styles.rippleContainer, className)}
+    <Component
+      {...rest}
+      className={clsx(styles.rippleContainer, className ?? '')}
       onMouseDown={(e: MouseEvent) => {
         handleMouseDown(e);
-        onMouseDown(e);
+        onMouseDown?.(e);
       }}
       onTouchStart={(e: TouchEvent) => {
         handleTouchStart(e);
-        onTouchStart(e);
+        onTouchStart?.(e);
       }}
       onTouchMove={(e: TouchEvent) => {
         cancelRipplePerformTouch();
-        onTouchMove(e);
+        onTouchMove?.(e);
       }}
       onTouchEnd={(e: TouchEvent) => {
         rippleDeletionReservation(e);
-        onTouchEnd(e);
+        onTouchEnd?.(e);
       }}
       onMouseUp={(e: MouseEvent) => {
         rippleDeletionReservation(e);
-        onMouseUp(e);
+        onMouseUp?.(e);
       }}
       onMouseLeave={(e: MouseEvent) => {
         rippleDeletionReservation(e);
-        onMouseLeave(e);
+        onMouseLeave?.(e);
       }}
       onTouchCancel={(e: TouchEvent) => {
         rippleDeletionReservation(e);
-        onTouchCancel(e);
+        onTouchCancel?.(e);
       }}
     >
       {ripples.map(
@@ -271,7 +257,7 @@ const RippleContainer = ({
         },
       )}
       {children}
-    </div>
+    </Component>
   );
 };
 
