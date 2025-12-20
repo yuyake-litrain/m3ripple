@@ -1,3 +1,7 @@
+# PUBLISH IS WORK IN PROGRESS!!
+You can't use this package now!\
+Please wait until I publish.
+
 <h1 align="center">✨ m3ripple</h1>
 <p align="center">Bring Material 3(You) Ripple Effect to your <b>React</b> projects!</p>
 <div align="center">
