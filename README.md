@@ -10,7 +10,7 @@ Previously, it was named <b>m3ripple</b>.</p>
 [![GitHub Repo stars](https://img.shields.io/github/stars/yuyake-litrain/sparkle-ripple?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](#)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yuyake-litrain/sparkle-ripple/main.yml?style=for-the-badge&labelColor=%235c4b39&color=%23363024)](https://github.com/yuyake-litrain/sparkle-ripple/actions/workflows/main.yml)
 </div>
-<div align="center"><a href="https://m3ripple.js.org/"><b>Live Demo</b></a></div><br />
+<div align="center"><a href="https://sparkle-ripple.js.org/"><b>Live Demo</b></a></div><br />
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/5b8cd5e6-5c91-4ca1-bc4d-50d5781a8be9" />
