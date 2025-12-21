@@ -34,7 +34,7 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/sparkle-ripple.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/sparkle-ripple.js",
       "require": "./dist/sparkle-ripple.umd.cjs"
     },
