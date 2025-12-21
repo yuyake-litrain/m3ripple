@@ -1,6 +1,6 @@
 <h1 align="center">✨ sparkle-ripple</h1>
-<p align="center">Bring Material 3(You) Ripple Effect to your <b>React</b> projects!</p>
-<p align="center">Previously, it was named <b>m3-ripple</b>.</p>
+<p align="center">Bring Material 3(You) Ripple Effect to your <b>React</b> projects!<br />
+Previously, it was named <b>m3ripple</b>.</p>
 <div align="center">
 
 [![NPM Version](https://img.shields.io/npm/v/sparkle-ripple?style=for-the-badge&logo=npm&logoColor=white&labelColor=%235c4b39&color=%23363024)](https://www.npmjs.com/package/sparkle-ripple)
