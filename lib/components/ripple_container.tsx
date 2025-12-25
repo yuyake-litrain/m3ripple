@@ -26,7 +26,10 @@ export type RippleObj = {
   tobeDeleted: boolean;
 };
 
-type Props<T extends ElementType = 'div'> = Omit<ComponentPropsWithoutRef<T>, 'as'> & {
+type Props<T extends ElementType = 'div'> = Omit<
+  ComponentPropsWithoutRef<T>,
+  'as'
+> & {
   as?: T;
   isMaterial3?: boolean;
   beforeRippleFn?: (event: React.MouseEvent | React.TouchEvent) => void;
@@ -105,7 +108,7 @@ const RippleContainer = <T extends ElementType = 'div'>({
     // ripple width looks smaller than real width because of the gradient background
     const ripple_width = rippleWidthOriginal / 0.8;
     // UNIX time
-    const time = new Date().getTime();
+    const time = Date.now();
 
     setRipples((prev) => {
       return [
@@ -193,7 +196,7 @@ const RippleContainer = <T extends ElementType = 'div'>({
     isScroll.current = true;
   };
 
-  const Component: ElementType = as ?? 'div'
+  const Component: ElementType = as ?? 'div';
 
   return (
     <Component
