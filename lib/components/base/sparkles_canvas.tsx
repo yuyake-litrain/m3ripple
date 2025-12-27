@@ -21,6 +21,7 @@ const SparklesCanvas = memo(
   }) => {
     const animIdRef = useRef<number>(null);
     const ref = useRef<HTMLCanvasElement>(null);
+    const animRunningRef = useRef<boolean>(true);
 
     useEffect(() => {
       const pixelRatio = window.devicePixelRatio;
@@ -46,6 +47,8 @@ const SparklesCanvas = memo(
             context,
             rippleRef.current,
             ripple_width,
+            animIdRef,
+            animRunningRef,
             {
               rgb: sparklesColorRGB,
               opacity_level1: opacity_level1,
@@ -68,7 +71,10 @@ const SparklesCanvas = memo(
       );
 
       return () => {
-        if (animIdRef.current) cancelAnimationFrame(animIdRef.current);
+        if (animIdRef.current) {
+          animRunningRef.current = false;
+          cancelAnimationFrame(animIdRef.current);
+        }
       };
     }, [
       ripple_width,

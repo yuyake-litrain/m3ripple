@@ -1,5 +1,7 @@
 // compression level of sparkles（バラけ具合）
 
+import type { RefObject } from 'react';
+
 class Sparkle {
   xpos: number;
   ypos: number;
@@ -76,6 +78,8 @@ export function drawSparkles(
   context: CanvasRenderingContext2D,
   ripple: HTMLSpanElement,
   ripple_width: number,
+  animIdRef: RefObject<number | null>,
+  animRunningRef: RefObject<boolean>,
   sparklesColor: SparklesColor = {
     rgb: '255 255 255',
     opacity_level1: '0.2',
@@ -83,22 +87,22 @@ export function drawSparkles(
   },
   // no zero
   convLevel = 6,
-  spaklesMaxCount = 2048,
+  sparklesMaxCount = 2048,
 ) {
   const nowRippleRadius = ripple.clientWidth / 2;
   const radius = ripple.clientWidth / 2.6;
 
   context.clearRect(0, 0, ripple_width, ripple_width);
 
-  if (nowRippleRadius === 0 || convLevel === 0) {
+  if (nowRippleRadius === 0 || convLevel === 0 || !animRunningRef.current) {
     return;
   }
 
   const sparkles: Sparkle[] = [];
 
   let sparkleCount = ripple.clientWidth;
-  if (sparkleCount > spaklesMaxCount) {
-    sparkleCount = spaklesMaxCount;
+  if (sparkleCount > sparklesMaxCount) {
+    sparkleCount = sparklesMaxCount;
   }
 
   // リップルの発生源を中心とした半径一定（radius）な円上の点は、角度が定まれば一つに定まる
@@ -149,7 +153,17 @@ export function drawSparkles(
     }
   }
 
-  window.requestAnimationFrame(() =>
-    drawSparkles(sparkle_collection, context, ripple, ripple_width),
+  animIdRef.current = requestAnimationFrame(() =>
+    drawSparkles(
+      sparkle_collection,
+      context,
+      ripple,
+      ripple_width,
+      animIdRef,
+      animRunningRef,
+      sparklesColor,
+      convLevel,
+      sparklesMaxCount,
+    ),
   );
 }
