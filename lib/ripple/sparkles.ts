@@ -1,5 +1,3 @@
-// compression level of sparkles（バラけ具合）
-
 import type { RefObject } from 'react';
 
 class Sparkle {
